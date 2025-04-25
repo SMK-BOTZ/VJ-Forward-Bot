@@ -33,15 +33,16 @@ class  Script(object):
 ► __if the **From Channel** is private your userbot must be member in there or your bot must need admin permission in there also__
 ► __Then use /forward to forward messages__
 
-► ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ [ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ](https://youtu.be/wO1FE-lf35I)</b>"""
+► ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ [ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ](https://youtu.be/)</b>"""
   
   ABOUT_TXT = """<b>
 ╔════❰ ғᴏʀᴡᴀʀᴅ ʙᴏᴛ ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼📃ʙᴏᴛ : [Fᴏʀᴡᴀᴅ Bᴏᴛ](https://t.me/VJForwardBot)
-║┣⪼👦Cʀᴇᴀᴛᴏʀ : [Kɪɴɢ VJ 👑](https://t.me/kingvj01)
-║┣⪼🤖Uᴘᴅᴀᴛᴇ : [VJ Bᴏᴛᴢ](https://t.me/vj_botz)
-║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : Sᴜᴘᴇʀ Fᴀsᴛ
+║┣⪼📃ʙᴏᴛ : [Mɪᴋᴀꜱᴀ Fᴏʀᴡᴀʀᴅ Bᴏᴛ](https://t.me/Mikasa_Forward_Bot)
+║┣⪼👦Cʀᴇᴀᴛᴏʀ : [ꜱɪʏᴀ ✨](https://t.me/Miss_Siya_1)
+║┣⪼🤖Uᴘᴅᴀᴛᴇ : [ᴍɪꜱꜱ ꜱɪʏᴀ ʙᴏᴛ](https://t.me/Miss_Siya_Bot)
+║┣⪼📡Sᴜᴘᴘᴏʀᴛ : [ᴍɪꜱꜱ ꜱɪʏᴀ ꜱᴜᴘᴘᴏʀᴛ](https://t.me/Miss_Siya_Support)
+║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : Hᴇʀᴏkᴜ
 ║┣⪼🗣️Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ3
 ║┣⪼📚Lɪʙʀᴀʀʏ : Pʏʀᴏɢʀᴀᴍ Gᴀᴛʜᴇʀ 2.11.0 
 ║┣⪼🗒️Vᴇʀsɪᴏɴ : 0.18.3
