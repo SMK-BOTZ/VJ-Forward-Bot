@@ -1,4 +1,4 @@
-
+from plugins.forcesub import ForceSub
 import os
 import sys
 import asyncio 
@@ -31,6 +31,12 @@ main_buttons = [[
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
     user = message.from_user
+
+    # Check for force subscription
+    Fsub = await ForceSub(client, message)
+    if Fsub == 400:
+        return
+        
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
     reply_markup = InlineKeyboardMarkup(main_buttons)
