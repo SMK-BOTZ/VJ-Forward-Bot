@@ -6,9 +6,9 @@ from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pymongo import MongoClient
 
-client = MongoClient(Config.DB_URL)
-db = client[Config.DB_NAME]
-requested_users = db.requested_users
+client = MongoClient(Config.DATABASE_URI)
+db = client[Config.DATABASE_NAME]
+requested_users = db.requested_users  # Collection to store user IDs
 
 
 async def ForceSub(c: Client, m: Message):
