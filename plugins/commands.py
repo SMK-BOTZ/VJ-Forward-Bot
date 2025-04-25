@@ -108,6 +108,13 @@ async def status(bot, query):
         disable_web_page_preview=True,
     )
 
+@Client.on_callback_query(filters.regex(r'^donate'))
+async def donate(bot, query):
+    await query.message.edit_text(
+        text=DONATE_TXT,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
+    )
+
 @Client.on_callback_query(filters.regex(r'^systm_sts'))
 async def sys_status(bot, query):
     buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
