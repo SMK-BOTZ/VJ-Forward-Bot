@@ -2,6 +2,12 @@
 import asyncio
 import motor.motor_asyncio
 
+from pymongo import MongoClient
+
+client = MongoClient(Config.DB_URL)
+db = client[Config.DB_NAME]
+requested_users = db.requested_users  # Collection to store user IDs
+
 class MongoDB:
     def __init__(self, uri, db_name, collection):
         self.uri = uri
