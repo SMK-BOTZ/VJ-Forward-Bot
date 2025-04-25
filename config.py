@@ -10,7 +10,7 @@ class Config:
     DATABASE_NAME = environ.get("DATABASE_NAME", "cluster0")
     BOT_OWNER = int(environ.get("BOT_OWNER", "6879821587"))
     FORCESUB_CHANNELS = ["-1002549170360", "-1002630469734"]  # Example list of channel IDs
-     UPDATES_CHANNEL = "-1002683834429"
+    UPDATES_CHANNEL = "-1002683834429"
 
 class temp(object): 
     lock = {}
