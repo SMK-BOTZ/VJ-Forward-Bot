@@ -1,13 +1,6 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 import asyncio
 import motor.motor_asyncio
-
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 class MongoDB:
     def __init__(self, uri, db_name, collection):
@@ -41,10 +34,6 @@ class MongoDB:
     async def drop_all(self):
         return await self.files.drop()
         
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 async def connect_user_db(user_id, uri, chat):
     chat = f"{user_id}{chat}"
     dbname = f"{user_id}-Forward-Bot"
@@ -56,6 +45,3 @@ async def connect_user_db(user_id, uri, chat):
         return False, db
     return True, db
     
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
