@@ -1,6 +1,3 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 import asyncio 
 from database import Db, db
@@ -12,20 +9,12 @@ from .db import connect_user_db
 
 CLIENT = CLIENT()
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
    await message.reply_text(
      "<b>Hᴇʀᴇ Is Tʜᴇ Sᴇᴛᴛɪɴɢs Pᴀɴᴇʟ⚙\n\nᴄʜᴀɴɢᴇ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs ᴀs ʏᴏᴜʀ ᴡɪsʜ 👇</b>",
      reply_markup=main_buttons()
      )
-
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 @Client.on_callback_query(filters.regex(r'^settings'))
 async def settings_query(bot, query):
@@ -461,9 +450,6 @@ async def settings_query(bot, query):
     alert = type.split('_')[1]
     await query.answer(alert, show_alert=True)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 def extra_buttons():
    buttons = [[
@@ -483,9 +469,6 @@ def extra_buttons():
        ]]
    return InlineKeyboardMarkup(buttons)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 def main_buttons():
   buttons = [[
@@ -512,9 +495,6 @@ def main_buttons():
        ]]
   return InlineKeyboardMarkup(buttons)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 def size_limit(limit):
    if str(limit) == "None":
@@ -524,9 +504,7 @@ def size_limit(limit):
    else:
       return False, "less than"
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+
 
 def extract_btn(datas):
     i = 0
@@ -544,9 +522,6 @@ def extract_btn(datas):
             i += 1
     return btn 
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 def maxsize_button(size):
   buttons = [[
@@ -583,9 +558,6 @@ def maxsize_button(size):
      ]]
   return InlineKeyboardMarkup(buttons)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 def size_button(size):
   buttons = [[
@@ -622,9 +594,6 @@ def size_button(size):
      ]]
   return InlineKeyboardMarkup(buttons)
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
 
 async def filters_buttons(user_id):
   filter = await get_configs(user_id)
@@ -667,10 +636,6 @@ async def filters_buttons(user_id):
        ]]
   return InlineKeyboardMarkup(buttons) 
 
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 async def next_filters_buttons(user_id):
   filter = await get_configs(user_id)
   filters = filter['filters']
@@ -712,7 +677,3 @@ async def next_filters_buttons(user_id):
                     callback_data="settings#main")
        ]]
   return InlineKeyboardMarkup(buttons) 
-
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
