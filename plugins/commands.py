@@ -13,19 +13,20 @@ from os import environ, execle, system
 
 START_TIME = time.time()
 
+# Define the DONATE_TXT variable in this script
+DONATE_TXT = """ if you liked me ❤️. consider make a donation to support my developer 👦
+
+UPI ID - <code>coming soon...</code>
+"""
+
 main_buttons = [[
-    InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
-],[
-    InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
-],[
-    InlineKeyboardButton('💝 sᴜʙsᴄʀɪʙᴇ ᴍʏ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ', url='https://youtube.com/@Tech_VJ')
-],[
-    InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
-    InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
-],[
-    InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
-]]
+        InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
+        ],[
+        InlineKeyboardButton('📜 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Miss_Siya_Bot'),
+        InlineKeyboardButton('📣 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Miss_Siya_Support')
+        ],[
+        InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
+        ]]
 
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
@@ -49,12 +50,13 @@ async def restart(client, message):
 @Client.on_callback_query(filters.regex(r'^help'))
 async def helpcb(bot, query):
     buttons = [[
-        InlineKeyboardButton('🤔 ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ❓', callback_data='how_to_use')
+        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
     ],[
-        InlineKeyboardButton('Aʙᴏᴜᴛ ✨️', callback_data='about'),
-        InlineKeyboardButton('⚙ Sᴇᴛᴛɪɴɢs', callback_data='settings#main')
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
     ],[
-        InlineKeyboardButton('• back', callback_data='back')
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(text=Script.HELP_TXT, reply_markup=reply_markup)
@@ -79,7 +81,8 @@ async def back(bot, query):
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
     buttons = [[
-         InlineKeyboardButton('• back', callback_data='help'),
+         InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
+         InlineKeyboardButton('• back', callback_data='back'),
          InlineKeyboardButton('Stats ✨️', callback_data='status')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -96,7 +99,7 @@ async def status(bot, query):
     upt = await get_bot_uptime(START_TIME)
     buttons = [[
         InlineKeyboardButton('• back', callback_data='help'),
-        InlineKeyboardButton('System Stats ✨️', callback_data='systm_sts'),
+        InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts'),
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
