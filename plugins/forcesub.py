@@ -37,7 +37,7 @@ async def ForceSub(c: Client, m: Message):
                     [
                         InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link)
                     ],[
-                        InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url='https://t.me/BinarYForwarDBoT?start=start_')
+                        InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url='https://t.me/Mikasa_Forward_Bot?start=start_')
                     ]
                 ]
             )
