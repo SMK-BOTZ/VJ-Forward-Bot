@@ -9,7 +9,7 @@ class Config:
     DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://misssiyaofficial:zzx4322CU68rU8gw@cluster0.frhwbd1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DATABASE_NAME = environ.get("DATABASE_NAME", "cluster0")
     BOT_OWNER = int(environ.get("BOT_OWNER", "6879821587"))
-    UPDATES_CHANNEL = "-1002683834429"
+    FORCESUB_CHANNELS = ["-1002549170360", "-1002630469734"]  # Example list of channel IDs
 
 class temp(object): 
     lock = {}
