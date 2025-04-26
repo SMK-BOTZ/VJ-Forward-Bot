@@ -14,6 +14,9 @@ class Config:
     UPDATES_CHANNEL = ["-1002549170360", "-1002630469734", "-1002630469734"]  # List of channel IDs
     BOT_START_LINK = "https://t.me/your_bot_username?start=start_" # Add this line
 
+    #shortcuts
+    SUPPORT_GROUP = "Miss_Siya_1"
+
 
 class temp(object):     
     lock = {}
