@@ -8,6 +8,7 @@
 
 ## Features
 
+- [x] you can add 1 forcesub to 4+ forcesub channel
 - [x] ui changed
 - [x] Errors Fixed
 - [x] Multiple Forcesub (you can add 4+ channel) ["-1002549170360", "-1002630469734", "-1002416394936"] add like this way
