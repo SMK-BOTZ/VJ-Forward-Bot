@@ -11,7 +11,7 @@ class Config:
     BOT_OWNER = int(environ.get("BOT_OWNER", "6879821587"))
     
     # ... other config variables ...
-    UPDATES_CHANNEL = ["-1002549170360", "-1002630469734", "-1002630469734"]  # List of channel IDs
+    UPDATES_CHANNEL = ["-1002549170360", "-1002630469734", "-1002630469734" , "-1002416394936"]  # List of channel IDs
     BOT_START_LINK = "https://t.me/your_bot_username?start=start_" # Add this line
 
     #shortcuts
