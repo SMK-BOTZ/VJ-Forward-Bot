@@ -23,7 +23,7 @@ main_buttons = [[
         InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
         ],[
         InlineKeyboardButton('📜 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Miss_Siya_Bot'),
-        InlineKeyboardButton('📣 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Miss_Siya_Support')
+        InlineKeyboardButton('📣 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/{Config.SUPPORT_GROUP})
         ],[
         InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
         ]]
