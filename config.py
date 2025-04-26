@@ -9,13 +9,13 @@ class Config:
     DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://misssiyaofficial:zzx4322CU68rU8gw@cluster0.frhwbd1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DATABASE_NAME = environ.get("DATABASE_NAME", "cluster0")
     BOT_OWNER = int(environ.get("BOT_OWNER", "6879821587"))
-    #  Single Channel (old way)
-    # UPDATES_CHANNEL = "-1001234567890"  
     
-    # Multiple Channels (new way)
-    UPDATES_CHANNEL = ["-1002549170360", "-1002630469734", "-1002630469734"]
+    # ... other config variables ...
+    UPDATES_CHANNEL = ["-1002549170360", "-1002630469734", "-1002630469734"]  # List of channel IDs
+    BOT_START_LINK = "https://t.me/your_bot_username?start=start_" # Add this line
 
-class temp(object): 
+
+class temp(object):     
     lock = {}
     CANCEL = {}
     forwardings = 0
