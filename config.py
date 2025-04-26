@@ -16,6 +16,7 @@ class Config:
 
     #shortcuts
     SUPPORT_GROUP = "Miss_Siya_1"
+    UPDATE_CHANNEL = "yoursupport"
 
 
 class temp(object):     
