@@ -1,4 +1,4 @@
-from plugins.forcesub import ForceSub
+from plugins.forcesub import *
 import os
 import sys
 import asyncio 
