@@ -4,10 +4,16 @@
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+to+Siya+Forward+Bot!)
 
-## How To Deploy [Video Tutorial](https://youtu.be/A-iIh_5WAlk)
+## How To Deploy [Video Tutorial](https://youtu.be/)
 
 ## Features
 
+- [x] ui changed
+- [x] Errors Fixed
+- [x] Multiple Forcesub (you can add 4+ channel) ["-1002549170360", "-1002630469734", "-1002416394936"] add like this way
+- [x] Donation Callback added
+- [x] Copyright Callback added (don't remove it i know me bol rhi hun tab bhi credits hataoge par upar wala to dekh raha hai)
+- [x] Short cut added just add your channel link eithout @ and support channel also without @
 - [x] Public Forward (Bot)
 - [x] Private Forward (User Bot)
 - [x] Custom Caption 
@@ -18,7 +24,7 @@
 - [x] Auto Restart Pending Task After Bot Restart 
 
 
-<b>To Know About All Features, Join My <a href='https://t.me/VJ_Botz'>Update Channel</a>.</b>
+<b>To Know About All Features, Join My <a href='https://t.me/Miss_Siya_Bot'>Update Channel</a>.</b>
 
 ## Commands
 
@@ -40,8 +46,9 @@ broadcast - broadcast a message to all your users (owner only)
 * `API_HASH` API Hash from my.telegram.org
 * `BOT_TOKEN` Bot token from @BotFather
 * `BOT_OWNER` Telegram Account Id of Owner.
-* `DATABASE_URI` Database uri from [MongoDB](https://mongodb.com) Watch [Video Tutorial](https://youtu.be/DAHRmFdw99o)
+* `DATABASE_URI` Database uri from [MongoDB](https://mongodb.com) Watch [Video Tutorial](https://youtu.be/)
 
 ## Credits
 
-* <b>[Tech VJ](https://youtube.com/@Tech_VJ)</b>
+* <b> Credits have been given in the Bot </b>
+* <b>[Miss Siya Bot](https://youtube.com/@MissSiyaBot)</b>
