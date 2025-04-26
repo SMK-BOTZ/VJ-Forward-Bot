@@ -1,8 +1,8 @@
-# VJ Forward Bot
+# Siya Forward Bot
 
-<b>Auto Restart All User Forwarding After Bot Restarted.</b>
+<b>A Forward Bot That Can Forward All Message From One Channel To Another With Advance Features.</b>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+VJ+Forward+Bot+!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+to+Siya+Forward+Bot!)
 
 ## How To Deploy [Video Tutorial](https://youtu.be/A-iIh_5WAlk)
 
