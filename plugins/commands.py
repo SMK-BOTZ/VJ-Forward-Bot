@@ -19,6 +19,16 @@ DONATE_TXT = """ if you liked me ❤️. consider make a donation to support my 
 UPI ID - <code>coming soon...</code>
 """
 
+# Define the COPYRIGHT_TXT variable in this script
+COPYRIGHT_TXT = """ ᴀʟʟ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴄʀᴇᴅɪᴛꜱ
+ʙᴀꜱᴇ ʀᴇᴘᴏ = ᴜɴᴋɴᴏᴡɴ ꜱᴏᴜʀᴄᴇ
+ꜰᴏʀᴄᴇꜱᴜʙ = @Anmol0700
+ʀᴇᴘᴏ ᴇʀʀᴏʀꜱ ꜰɪxᴇᴅ = @Sahil_x_official
+ᴍᴜʟᴛɪᴘʟᴇ ꜰᴏʀᴄᴇꜱᴜʙ = @Necromancer_sl
+ɴᴇᴡ ᴄᴀʟʟʙᴀᴄᴋꜱ ᴀɴᴅ ᴇʀʀᴏʀꜱ ꜰɪxᴇᴅ = @Miss_Siya_1
+ɪꜰ ɪ ꜰᴏʀɢᴏᴛ ᴀɴʏᴏɴᴇ ɪɴ ᴛʜɪꜱ ᴛʜᴇɴ ᴛʜᴀᴛꜱ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ ɴᴏᴛ ᴍɪɴᴇ.
+"""
+
 main_buttons = [[
         InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
         ],[
@@ -88,8 +98,8 @@ async def back(bot, query):
 async def about(bot, query):
     buttons = [[
          InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
-         InlineKeyboardButton('• back', callback_data='back'),
-         InlineKeyboardButton('Stats ✨️', callback_data='status')
+         InlineKeyboardButton('ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
+         InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
@@ -118,6 +128,13 @@ async def status(bot, query):
 async def donate(bot, query):
     await query.message.edit_text(
         text=DONATE_TXT,
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
+    )
+
+@Client.on_callback_query(filters.regex(r'^copyright'))
+async def donate(bot, query):
+    await query.message.edit_text(
+        text=COPYRIGHT_TXT,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
     )
 
