@@ -79,17 +79,25 @@ ui_layouts = {
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
         "help": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        InlineKeyboardButton('❗️ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ⁉️', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton(' sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs 📊', callback_data='status')
+        ],[
+            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🗯', callback_data='about')
         ]],
         "how_to_use": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('⚙️ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('Back 👉🏻', callback_data='start')
         ]],
         "donate": [[
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
             InlineKeyboardButton('Back', callback_data='start')
         ]],
         "copyright": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('Back 👉🏻', callback_data='start')
         ]],
     },
 
@@ -103,23 +111,32 @@ ui_layouts = {
         InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
         ]],
         "how_to_use": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('Back •', callback_data='start')
         ]],
         "status": [[
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
-        "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        "help": [[
+        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs •', callback_data='status')
+        ],[
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ •', callback_data='about')
         ]],
         "donate": [[
+            InlineKeyboardButton('🪡 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🪡', url='https://t.me/Shubham_X_Official'),
             InlineKeyboardButton('Back', callback_data='start')
         ]],
         "copyright": [[
+            InlineKeyboardButton('🪡 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🪡', url='https://t.me/Shubham_X_Official'),
             InlineKeyboardButton('Back', callback_data='start')
         ]],
         "about": [[
+            InlineKeyboardButton('🪡 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🪡', url='https://t.me/Shubham_X_Official'),
             InlineKeyboardButton('Back', callback_data='start')
         ]]
     },
@@ -129,15 +146,20 @@ ui_layouts = {
             InlineKeyboardButton('👨‍💻 Help', callback_data='help')
         ]],
         "how_to_use": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
         ]],
         "status": [[
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
-        "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        "help": [[
+        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
+        ],[
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
@@ -161,9 +183,14 @@ ui_layouts = {
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
-        "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        "help": [[
+        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
+        ],[
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
@@ -187,9 +214,14 @@ ui_layouts = {
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
-        "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        "help": [[
+        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
+        ],[
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
@@ -213,9 +245,14 @@ ui_layouts = {
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
-        "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        "help": [[
+        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
+        ],[
+            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
