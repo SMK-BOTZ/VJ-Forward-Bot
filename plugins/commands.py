@@ -59,10 +59,10 @@ current_ui = "kokan"
 ui_layouts = {
     "kokan": {
         "start": [[
-            InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
+            InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
         ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/vj_bot_disscussion'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/vj_botz')
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Arise_Botz'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots')
         ],[
             InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
@@ -77,15 +77,41 @@ ui_layouts = {
         "status": [[
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
-        ]]
+        ]],
+        "help": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "donate": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
     },
 
     "Yareyare": {
         "start": [[
-            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
+        ],[
+        InlineKeyboardButton('📜 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Arise_Bots'),
+        InlineKeyboardButton('📣 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/Arise_Botss')
+        ],[
+        InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
         ]],
         "how_to_use": [[
             InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
@@ -105,6 +131,14 @@ ui_layouts = {
         "how_to_use": [[
             InlineKeyboardButton('Back', callback_data='start')
         ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
         ]],
@@ -122,6 +156,14 @@ ui_layouts = {
         ]],
         "how_to_use": [[
             InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
@@ -141,6 +183,14 @@ ui_layouts = {
         "how_to_use": [[
             InlineKeyboardButton('Back', callback_data='start')
         ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
         ]],
@@ -158,6 +208,14 @@ ui_layouts = {
         ]],
         "how_to_use": [[
             InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
         "donate": [[
             InlineKeyboardButton('Back', callback_data='start')
