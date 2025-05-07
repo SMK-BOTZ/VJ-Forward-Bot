@@ -270,45 +270,25 @@ ui_layouts = {
     
     "arisebots": {
         "start": [[
-            InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
-        ],[
-            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Arise_Botz'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots')
-        ],[
-            InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
-        ],[
-            InlineKeyboardButton('⚙ ꜱᴇᴛᴛɪɴɢꜱ', callback_data='settings#main')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "about": [[
-            InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
-            InlineKeyboardButton('ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
-            InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "status": [[
-            InlineKeyboardButton('🔙 back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ 📊', callback_data='systm_sts')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "help": [[
-        InlineKeyboardButton('❗️ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ⁉️', callback_data='how_to_use')
-        ],[
-            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('sᴛᴀᴛᴜs 📊', callback_data='status')
-        ],[
-            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='back'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🗯', callback_data='about')
+        InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "how_to_use": [[
-            InlineKeyboardButton('⚙️ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('Back 👉🏻', callback_data='start')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "donate": [[
-            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "copyright": [[
-            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back 👉🏻', callback_data='start')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
     }
     
