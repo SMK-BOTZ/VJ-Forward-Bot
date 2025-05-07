@@ -429,6 +429,21 @@ async def change_ui_callback(bot, query):
         # Optionally, redisplay the UI selection menu
         await ui_layouts_menu(bot, query) # Call the ui_layouts_menu handler
 
+@Client.on_message(filters.private & filters.command(['changeui']) & filters.user(Config.BOT_OWNER))
+async def change_ui(client, message):
+    global current_ui
+    args = message.text.split()
+    if len(args) != 2:
+        # Update this usage message to list the actual available UIs
+        await message.reply_text(f"Usage: /changeui <{'|'.join(ui_layouts.keys())}>")
+        return
+    ui = args[1]
+    if ui not in ui_layouts:
+        await message.reply_text(f"Invalid UI. Available: {', '.join(ui_layouts.keys())}")
+        return
+    current_ui = ui
+    await message.reply_text(f"✅ UI changed to {ui}. All future messages will reflect the new layout.")
+
 # --- (Optional) Update your existing 'back' handler for consistency ---
 # Make sure the back button always returns to the start menu using the current UI layout
 @Client.on_callback_query(filters.regex(r'^back'))
