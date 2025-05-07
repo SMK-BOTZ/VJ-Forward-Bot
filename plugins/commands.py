@@ -62,7 +62,8 @@ ui_layouts = {
             InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
         ],[
             InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Arise_Botz'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots')
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots'),
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ],[
             InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
