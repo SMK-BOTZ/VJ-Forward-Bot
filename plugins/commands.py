@@ -40,7 +40,7 @@ def get_ui(section_key: str):
     """
     # Get the dictionary of sections for the current_ui,
     # defaulting to the "default" UI if current_ui is not found.
-    current_layout_sections = ui_layouts.get(current_ui, ui_layouts.get("default", {}))
+    current_layout_sections = ui_layouts.get(current_ui, ui_layouts.get("kokan", {}))
     
     # Get the specific button layout for the requested section_key.
     buttons = current_layout_sections.get(section_key)
@@ -54,10 +54,10 @@ def get_ui(section_key: str):
         print(f"Warning: UI section '{section_key}' not found for UI '{current_ui}'.")
         return None # Or return InlineKeyboardMarkup([])
         
-current_ui = "default"
+current_ui = "kokan"
 
 ui_layouts = {
-    "default": {
+    "kokan": {
         "start": [[
             InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
         ],[
@@ -80,17 +80,96 @@ ui_layouts = {
         ]]
     },
 
-    "minimal": {
+    "Yareyare": {
         "start": [[
             InlineKeyboardButton('👨‍💻 Help', callback_data='help')
         ]],
-        "about": [[
+        "how_to_use": [[
             InlineKeyboardButton('Back', callback_data='start')
         ]],
-        "status": [[
+        "donate": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "about": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]]
+    },
+
+    "Okiru": {
+        "start": [[
+            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "donate": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "about": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]]
+    },
+
+    "yomaivo": {
+        "start": [[
+            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "donate": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "about": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]]
+    },
+
+    "sungspecial": {
+        "start": [[
+            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "donate": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "about": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]]
+    },
+    
+    "arisebots": {
+        "start": [[
+            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "donate": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "about": [[
             InlineKeyboardButton('Back', callback_data='start')
         ]]
     }
+    
 }
 
 
@@ -125,27 +204,10 @@ async def restart(client, message):
 
 @Client.on_callback_query(filters.regex(r'^help'))
 async def helpcb(bot, query):
-    buttons = [[
-        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
-    ],[
-            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
-    ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
-            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
-    ]]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    await query.message.edit_text(text=Script.HELP_TXT, reply_markup=reply_markup)
-
-@Client.on_callback_query(filters.regex(r'^how_to_use'))
-async def how_to_use(bot, query):
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
-    reply_markup = InlineKeyboardMarkup(buttons)
+    reply_markup = get_ui("help") # Use the new "help" section
     await query.message.edit_text(
-        text=Script.HOW_USE_TXT,
-        reply_markup=reply_markup,
-        disable_web_page_preview=True
-    )
+        text=Script.HELP_TXT,
+        reply_markup=reply_markup
 
 @Client.on_callback_query(filters.regex(r'^back'))
 async def back(bot, query):
@@ -174,18 +236,29 @@ async def status(bot, query):
     )
 
 
-@Client.on_callback_query(filters.regex(r'^donate'))
-async def donate(bot, query):
-    await query.message.edit_text(
-        text=DONATE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
-    )
-
 @Client.on_callback_query(filters.regex(r'^copyright'))
 async def donate(bot, query):
     await query.message.edit_text(
         text=COPYRIGHT_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
+        reply_markup=get_ui("copyright")
+    )
+
+@Client.on_callback_query(filters.regex(r'^donate'))
+async def donate(bot, query):
+    await query.message.edit_text(
+        text=DONATE_TXT,
+        reply_markup=get_ui("donate")
+    )
+
+@Client.on_callback_query(filters.regex(r'^how_to_use'))
+async def how_to_use(bot, query):
+    # The original 'buttons' and 'reply_markup' are no longer needed
+    # buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    # reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_text(
+        text=Script.HOW_USE_TXT,
+        reply_markup=get_ui("how_to_use"),
+        disable_web_page_preview=True
     )
 
 @Client.on_message(filters.private & filters.command(['changeui']) & filters.user(Config.BOT_OWNER))
