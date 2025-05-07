@@ -24,8 +24,7 @@ COPYRIGHT_TXT = """ ᴀʟʟ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴄʀᴇᴅɪᴛꜱ
 ʙᴀꜱᴇ ʀᴇᴘᴏ = ᴜɴᴋɴᴏᴡɴ ꜱᴏᴜʀᴄᴇ
 ꜰᴏʀᴄᴇꜱᴜʙ = @Anmol0700
 ʀᴇᴘᴏ ᴇʀʀᴏʀꜱ ꜰɪxᴇᴅ = @Sahil_x_official
-ᴍᴜʟᴛɪᴘʟᴇ ꜰᴏʀᴄᴇꜱᴜʙ = @Necromancer_sl
-ɴᴇᴡ ᴄᴀʟʟʙᴀᴄᴋꜱ ᴀɴᴅ ᴇʀʀᴏʀꜱ ꜰɪxᴇᴅ = @Miss_Siya_1
+ᴀɴᴅ ᴏᴛʜᴇʀ ꜰᴇᴀᴛᴜʀᴇꜱ ʙʏ = @shubham_X_official
 ɪꜰ ɪ ꜰᴏʀɢᴏᴛ ᴀɴʏᴏɴᴇ ɪɴ ᴛʜɪꜱ ᴛʜᴇɴ ᴛʜᴀᴛꜱ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ ɴᴏᴛ ᴍɪɴᴇ.
 """
 
@@ -54,10 +53,10 @@ def get_ui(section_key: str):
         print(f"Warning: UI section '{section_key}' not found for UI '{current_ui}'.")
         return None # Or return InlineKeyboardMarkup([])
         
-current_ui = "kokan"
+current_ui = "ᴛᴜꜱᴋ"
 
 ui_layouts = {
-    "kokan": {
+    "ᴛᴜꜱᴋ": {
         "start": [[
             InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
         ],[
@@ -101,7 +100,7 @@ ui_layouts = {
         ]],
     },
 
-    "Yareyare": {
+    "ʙᴇʟʟɪᴏɴ": {
         "start": [[
         InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
         ],[
@@ -141,7 +140,7 @@ ui_layouts = {
         ]]
     },
 
-    "Okiru": {
+    "ɪɢʀɪꜱ": {
         "start": [[
         InlineKeyboardButton('🦋 ᴜᴘᴅᴀᴛᴇs ', url='https://t.me/JISSHU_BOTS'),
         InlineKeyboardButton(' sᴜᴘᴘᴏʀᴛ ✨', url='https://t.me/Jisshu_support')
@@ -180,7 +179,7 @@ ui_layouts = {
         ]]
     },
 
-    "sungspecial": {
+    "ᴋᴀɪꜱᴇʟ": {
         "start": [[
             InlineKeyboardButton('⎝⎝✧ᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠', url='https://t.me/Shubham_X_Official')
         ],[
@@ -224,7 +223,7 @@ ui_layouts = {
         ]],
     },
 
-    "yomaivo": {
+    "ʙᴇʀᴜ": {
         "start": [[
             InlineKeyboardButton('❣️ 開発者 ❣️', url='https://t.me/Shubham_X_Official')
         ],[
@@ -268,7 +267,7 @@ ui_layouts = {
         ]],
     },
     
-    "arisebots": {
+    "ꜱᴜɴɢᴊɪɴᴡᴏᴏ": {
         "start": [[
             InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
