@@ -62,8 +62,7 @@ ui_layouts = {
             InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
         ],[
             InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Arise_Botz'),
-            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots'),
-            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots')
         ],[
             InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
@@ -93,8 +92,8 @@ ui_layouts = {
             InlineKeyboardButton('Back 👉🏻', callback_data='start')
         ]],
         "donate": [[
-            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
@@ -130,7 +129,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back •', callback_data='start')
+            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ ', url='https://t.me/Shubham_X_Official'),
@@ -169,7 +168,7 @@ ui_layouts = {
             ]],
         "donate": [[
             InlineKeyboardButton('🦋 ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ ✨', callback_data='about')
+            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('🦋 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
@@ -217,7 +216,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('⎝⎝✧ᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('⎝⎝✧Back✧⎠⎠', callback_data='start')
+            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('⎝⎝✧ᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠', url='https://t.me/Shubham_X_Official'),
@@ -261,7 +260,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('🧑‍💻 開発者 🧑‍💻', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('戻る', callback_data='start')
+            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('🧑‍💻 開発者 🧑‍💻', url='https://t.me/Shubham_X_Official'),
@@ -289,7 +288,8 @@ ui_layouts = {
             InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
         ]],
         "copyright": [[
-            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
         ]],
     }
     
