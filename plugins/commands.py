@@ -128,16 +128,16 @@ ui_layouts = {
             InlineKeyboardButton('ᴀʙᴏᴜᴛ •', callback_data='about')
         ]],
         "donate": [[
-            InlineKeyboardButton('🪡 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🪡', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('Back •', callback_data='start')
         ]],
         "copyright": [[
-            InlineKeyboardButton('🪡 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🪡', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ ', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('Back •', callback_data='start')
         ]],
         "about": [[
             InlineKeyboardButton('🪡 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🪡', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('Back •', callback_data='start')
         ]]
     },
 
