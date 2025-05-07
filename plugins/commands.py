@@ -30,7 +30,30 @@ COPYRIGHT_TXT = """ ᴀʟʟ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴄʀᴇᴅɪᴛꜱ
 """
 
 # Place this at the top, where `main_buttons` is defined
+# Your existing ui_layouts and current_ui definitions
+# ui_layouts = { ... }
+# current_ui = "default"
 
+def get_ui(section_key: str):
+    """
+    Retrieves the InlineKeyboardMarkup for a given section of the current UI.
+    """
+    # Get the dictionary of sections for the current_ui,
+    # defaulting to the "default" UI if current_ui is not found.
+    current_layout_sections = ui_layouts.get(current_ui, ui_layouts.get("default", {}))
+    
+    # Get the specific button layout for the requested section_key.
+    buttons = current_layout_sections.get(section_key)
+    
+    if buttons:
+        return InlineKeyboardMarkup(buttons)
+    else:
+        # Fallback or error handling if the section_key is not found for the UI
+        # For example, return None or an empty markup
+        # This depends on how you want to handle missing UI sections
+        print(f"Warning: UI section '{section_key}' not found for UI '{current_ui}'.")
+        return None # Or return InlineKeyboardMarkup([])
+        
 current_ui = "default"
 
 ui_layouts = {
