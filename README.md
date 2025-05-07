@@ -1,17 +1,16 @@
-# Siya Forward Bot
+# Arise Forward Bot
 
 <b>A Forward Bot That Can Forward All Message From One Channel To Another With Advance Features.</b>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+to+Siya+Forward+Bot!)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+to+Arise+Forward+Bot+!;A+Advanced+forward+bot+to+forward;+from+one+channel+to+another.)](https://git.io/typing-svg)
 
 ## How To Deploy [Video Tutorial](https://youtu.be/)
 
 ## Features
 
-- [x] you can add 1 forcesub to 4+ forcesub channel
-- [x] ui changed
+- [x] Multiple forcesub channel ["-1002549170360", "-1002630469734", "-1002416394936"] add like this way
+- [x] MD UI Premium
 - [x] Errors Fixed
-- [x] Multiple Forcesub (you can add 4+ channel) ["-1002549170360", "-1002630469734", "-1002416394936"] add like this way
 - [x] Donation Callback added
 - [x] Copyright Callback added (don't remove it i know me bol rhi hun tab bhi credits hataoge par upar wala to dekh raha hai)
 - [x] Short cut added just add your channel link eithout @ and support channel also without @
@@ -25,7 +24,7 @@
 - [x] Auto Restart Pending Task After Bot Restart 
 
 
-<b>To Know About All Features, Join My <a href='https://t.me/Miss_Siya_Bot'>Update Channel</a>.</b>
+<b>To Know About All Features, Join My <a href='https://t.me/Arise_Bots'>Update Channel</a>.</b>
 
 ## Commands
 
@@ -52,4 +51,4 @@ broadcast - broadcast a message to all your users (owner only)
 ## Credits
 
 * <b> Credits have been given in the Bot </b>
-* <b>[Miss Siya Bot](https://youtube.com/@MissSiyaBot)</b>
+* <b>[Arise Bots](https://youtube.com/)</b>
