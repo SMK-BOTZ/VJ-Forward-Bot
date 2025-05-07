@@ -383,19 +383,62 @@ async def how_to_use(bot, query):
         disable_web_page_preview=True
     )
 
-@Client.on_message(filters.private & filters.command(['changeui']) & filters.user(Config.BOT_OWNER))
-async def change_ui(client, message):
-    global current_ui
-    args = message.text.split()
-    if len(args) != 2:
-        await message.reply_text("Usage: /changeui <default|minimal>")
-        return
-    ui = args[1]
-    if ui not in ui_layouts:
-        await message.reply_text(f"Invalid UI. Available: {', '.join(ui_layouts.keys())}")
-        return
-    current_ui = ui
-    await message.reply_text(f"✅ UI changed to {ui}. All future messages will reflect the new layout.")
+# --- Add this handler to display the list of UI layouts ---
+@Client.on_callback_query(filters.regex(r'^settings#ui'))
+async def ui_layouts_menu(bot, query):
+    buttons = []
+    # Iterate through the keys (UI names) in your ui_layouts dictionary
+    for ui_key in ui_layouts.keys():
+        # Create a button for each UI layout
+        # The callback data will be 'changeui#<ui_key>'
+        buttons.append([InlineKeyboardButton(ui_key.capitalize(), callback_data=f"changeui#{ui_key}")])
+
+    # Add a back button to the settings main menu
+    buttons.append([InlineKeyboardButton("🔙 Back to Settings", callback_data="settings#main")])
+
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_text(
+        text="✨ **Choose a UI Layout** ✨", # You can define a UI_LAYOUTS_TXT
+        reply_markup=reply_markup
+    )
+
+# --- Add this handler to change the UI layout ---
+@Client.on_callback_query(filters.regex(r'^changeui#'))
+async def change_ui_callback(bot, query):
+    global current_ui # Declare global to modify the variable
+
+    # Extract the requested UI key from the callback data
+    # The callback data format is "changeui#<ui_key>"
+    requested_ui = query.data.split('#', 1)[1]
+
+    # Validate if the requested UI key exists in your ui_layouts
+    if requested_ui in ui_layouts:
+        current_ui = requested_ui # Change the global variable to the new UI
+        await query.answer(f"UI changed to {requested_ui.capitalize()}!", show_alert=True)
+
+        # Optional: Edit the message to show the start menu with the new UI
+        # This provides immediate visual feedback of the UI change
+        user_first_name = query.from_user.first_name if query.from_user else "User" # Get user's name
+        await query.message.edit_text(
+           text=Script.START_TXT.format(user_first_name), # Use the start text
+           reply_markup=get_ui("start") # Get the start menu markup for the NEW UI
+        )
+    else:
+        # Handle invalid UI key (shouldn't happen if buttons are generated correctly)
+        await query.answer("Invalid UI layout selected.", show_alert=True)
+        # Optionally, redisplay the UI selection menu
+        await ui_layouts_menu(bot, query) # Call the ui_layouts_menu handler
+
+# --- (Optional) Update your existing 'back' handler for consistency ---
+# Make sure the back button always returns to the start menu using the current UI layout
+@Client.on_callback_query(filters.regex(r'^back'))
+async def back(bot, query):
+    # Use get_ui("start") to get the start menu markup for the current UI
+    reply_markup = get_ui("start")
+    await query.message.edit_text(
+       reply_markup=reply_markup,
+       text=Script.START_TXT.format(query.from_user.first_name)
+    )
 
 
 @Client.on_callback_query(filters.regex(r'^systm_sts'))
