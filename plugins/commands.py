@@ -269,7 +269,8 @@ ui_layouts = {
     
     "ꜱᴜɴɢᴊɪɴᴡᴏᴏ": {
         "start": [[
-            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
         "about": [[
             InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
