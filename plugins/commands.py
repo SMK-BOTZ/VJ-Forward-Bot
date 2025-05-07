@@ -75,13 +75,13 @@ ui_layouts = {
             InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
         ]],
         "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+            InlineKeyboardButton('🔙 back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ 📊', callback_data='systm_sts')
         ]],
         "help": [[
         InlineKeyboardButton('❗️ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ⁉️', callback_data='how_to_use')
         ],[
-            InlineKeyboardButton(' sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
             InlineKeyboardButton('sᴛᴀᴛᴜs 📊', callback_data='status')
         ],[
             InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='back'),
