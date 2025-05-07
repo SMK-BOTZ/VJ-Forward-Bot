@@ -93,7 +93,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
