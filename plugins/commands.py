@@ -329,7 +329,7 @@ async def helpcb(bot, query):
     reply_markup = get_ui("help") # Use the new "help" section
     await query.message.edit_text(
         text=Script.HELP_TXT,
-        reply_markup=reply_markup
+        reply_markup=reply_markup)
 
 @Client.on_callback_query(filters.regex(r'^back'))
 async def back(bot, query):
