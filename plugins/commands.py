@@ -29,14 +29,28 @@ COPYRIGHT_TXT = """ ᴀʟʟ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴄʀᴇᴅɪᴛꜱ
 ɪꜰ ɪ ꜰᴏʀɢᴏᴛ ᴀɴʏᴏɴᴇ ɪɴ ᴛʜɪꜱ ᴛʜᴇɴ ᴛʜᴀᴛꜱ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ ɴᴏᴛ ᴍɪɴᴇ.
 """
 
-main_buttons = [[
-        InlineKeyboardButton('❗️ ʜᴇʟᴘ', callback_data='help')
-        ],[
-        InlineKeyboardButton('📜 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/{Config.UPDATE_CHANNEL}'),
-        InlineKeyboardButton('📣 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/{Config.SUPPORT_GROUP}')
-        ],[
-        InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate')
-        ]]
+# Place this at the top, where `main_buttons` is defined
+current_ui = "default"
+
+ui_layouts = {
+    "default": [[
+        InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
+    ],[
+        InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
+        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
+    ],[
+        InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
+        InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='abo    ]],
+    "minimal": [[
+        InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+    ],[
+        InlineKeyboardButton('❌ Close', callback_data='close')
+    ]]
+}
+
+def get_main_buttons():
+    return ui_layouts.get(current_ui, ui_layouts["default"])
+
 
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
@@ -49,7 +63,7 @@ async def start(client, message):
         
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
-    reply_markup = InlineKeyboardMarkup(main_buttons)
+    reply_markup = InlineKeyboardMarkup(get_main_buttons())
     await client.send_message(
         chat_id=message.chat.id,
         reply_markup=reply_markup,
@@ -137,6 +151,21 @@ async def donate(bot, query):
         text=COPYRIGHT_TXT,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back')]])
     )
+
+@Client.on_message(filters.private & filters.command(['changeui']) & filters.user(Config.BOT_OWNER))
+async def change_ui(client, message):
+    global current_ui
+    args = message.text.split()
+    if len(args) != 2:
+        await message.reply_text("Usage: /changeui <default|minimal>")
+        return
+    new_ui = args[1]
+    if new_ui in ui_layouts:
+        current_ui = new_ui
+        await message.reply_text(f"✅ UI changed to: {new_ui}")
+    else:
+        await message.reply_text("❌ Invalid UI. Available options: " + ", ".join(ui_layouts.keys()))
+
 
 @Client.on_callback_query(filters.regex(r'^systm_sts'))
 async def sys_status(bot, query):
