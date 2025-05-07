@@ -40,7 +40,10 @@ ui_layouts = {
         InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
     ],[
         InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='abo    ]],
+        InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
+    ],[
+        InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
+    ]],
     "minimal": [[
         InlineKeyboardButton('👨‍💻 Help', callback_data='help')
     ],[
