@@ -129,7 +129,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ ', url='https://t.me/Shubham_X_Official'),
@@ -168,7 +168,7 @@ ui_layouts = {
             ]],
         "donate": [[
             InlineKeyboardButton('🦋 ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
-            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('🦋 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
@@ -216,7 +216,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('⎝⎝✧ᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('⎝⎝✧ᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠', url='https://t.me/Shubham_X_Official'),
@@ -260,7 +260,7 @@ ui_layouts = {
         ]],
         "donate": [[
             InlineKeyboardButton('🧑‍💻 開発者 🧑‍💻', url='https://t.me/Shubham_X_Official'),
-            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
         "copyright": [[
             InlineKeyboardButton('🧑‍💻 開発者 🧑‍💻', url='https://t.me/Shubham_X_Official'),
@@ -289,7 +289,7 @@ ui_layouts = {
         ]],
         "copyright": [[
             InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton("ᴜɪ ʟᴀʏᴏᴜᴛꜱ ✨", callback_data="settings#ui")
+            InlineKeyboardButton("✨ UI Layouts ✨", callback_data="settings#ui")
         ]],
     }
     
