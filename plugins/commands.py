@@ -30,26 +30,46 @@ COPYRIGHT_TXT = """ ᴀʟʟ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴄʀᴇᴅɪᴛꜱ
 """
 
 # Place this at the top, where `main_buttons` is defined
+
 current_ui = "default"
 
 ui_layouts = {
-    "default": [[
-        InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
-    ],[
-        InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url='https://t.me/vj_bot_disscussion'),
-        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/vj_botz')
-    ],[
-        InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
-    ],[
-        InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
-    ]],
-    "minimal": [[
-        InlineKeyboardButton('👨‍💻 Help', callback_data='help')
-    ],[
-        InlineKeyboardButton('❌ Close', callback_data='close')
-    ]]
+    "default": {
+        "start": [[
+            InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/kingvj01')
+        ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/vj_bot_disscussion'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/vj_botz')
+        ],[
+            InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
+        ],[
+            InlineKeyboardButton('⚙ ꜱᴇᴛᴛɪɴɢꜱ', callback_data='settings#main')
+        ]],
+        "about": [[
+            InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
+            InlineKeyboardButton('ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
+            InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
+        ]],
+        "status": [[
+            InlineKeyboardButton('• back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+        ]]
+    },
+
+    "minimal": {
+        "start": [[
+            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        ]],
+        "about": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]],
+        "status": [[
+            InlineKeyboardButton('Back', callback_data='start')
+        ]]
+    }
 }
+
 
 def get_main_buttons():
     return ui_layouts.get(current_ui, ui_layouts["default"])
@@ -63,14 +83,14 @@ async def start(client, message):
     Fsub = await ForceSub(client, message)
     if Fsub == 400:
         return
-        
+    
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id, user.first_name)
-    reply_markup = InlineKeyboardMarkup(get_main_buttons())
     await client.send_message(
         chat_id=message.chat.id,
-        reply_markup=reply_markup,
-        text=Script.START_TXT.format(message.from_user.first_name))
+        text=Script.START_TXT.format(user.first_name),
+        reply_markup=get_ui("start")
+    )
 
 @Client.on_message(filters.private & filters.command(['restart']) & filters.user(Config.BOT_OWNER))
 async def restart(client, message):
@@ -113,15 +133,9 @@ async def back(bot, query):
 
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
-    buttons = [[
-         InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
-         InlineKeyboardButton('ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
-         InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
-    ]]
-    reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.ABOUT_TXT,
-        reply_markup=reply_markup,
+        reply_markup=get_ui("about"),
         disable_web_page_preview=True
     )
 
@@ -130,16 +144,12 @@ async def status(bot, query):
     users_count, bots_count = await db.total_users_bots_count()
     forwardings = await db.forwad_count()
     upt = await get_bot_uptime(START_TIME)
-    buttons = [[
-        InlineKeyboardButton('• back', callback_data='help'),
-        InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts'),
-    ]]
-    reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.STATUS_TXT.format(upt, users_count, bots_count, forwardings),
-        reply_markup=reply_markup,
-        disable_web_page_preview=True,
+        reply_markup=get_ui("status"),
+        disable_web_page_preview=True
     )
+
 
 @Client.on_callback_query(filters.regex(r'^donate'))
 async def donate(bot, query):
@@ -162,12 +172,12 @@ async def change_ui(client, message):
     if len(args) != 2:
         await message.reply_text("Usage: /changeui <default|minimal>")
         return
-    new_ui = args[1]
-    if new_ui in ui_layouts:
-        current_ui = new_ui
-        await message.reply_text(f"✅ UI changed to: {new_ui}")
-    else:
-        await message.reply_text("❌ Invalid UI. Available options: " + ", ".join(ui_layouts.keys()))
+    ui = args[1]
+    if ui not in ui_layouts:
+        await message.reply_text(f"Invalid UI. Available: {', '.join(ui_layouts.keys())}")
+        return
+    current_ui = ui
+    await message.reply_text(f"✅ UI changed to {ui}. All future messages will reflect the new layout.")
 
 
 @Client.on_callback_query(filters.regex(r'^systm_sts'))
