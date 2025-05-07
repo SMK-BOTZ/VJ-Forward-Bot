@@ -143,32 +143,40 @@ ui_layouts = {
 
     "Okiru": {
         "start": [[
-            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+        InlineKeyboardButton('🦋 ᴜᴘᴅᴀᴛᴇs ', url='https://t.me/JISSHU_BOTS'),
+        InlineKeyboardButton(' sᴜᴘᴘᴏʀᴛ ✨', url='https://t.me/Jisshu_support')
+        ],[
+        InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help'),
+        InlineKeyboardButton(' ᴀʙᴏᴜᴛ 😎', callback_data='about')
+        ],[
+        InlineKeyboardButton('🛠️ sᴇᴛᴛɪɴɢs ⚙️', callback_data='settings#main')
         ]],
         "how_to_use": [[
-            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('⛔ Back', callback_data='help'),
         ]],
         "status": [[
             InlineKeyboardButton('• back', callback_data='help'),
             InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
         ]],
         "help": [[
-        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
-        ],[
-            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
-        ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
-            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
-        ]],
+            InlineKeyboardButton('🛠️ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ 🛠️', callback_data='how_to_use')
+            ],[
+            InlineKeyboardButton('⚙️ sᴇᴛᴛɪɴɢs ⚙️', callback_data='settings#main'),
+            InlineKeyboardButton('📊 sᴛᴀᴛᴜs 📊', callback_data='status')
+            ],[
+            InlineKeyboardButton('⛔ ʙᴀᴄᴋ', callback_data='back')
+            ]],
         "donate": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🦋 ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ ✨', callback_data='about')
         ]],
         "copyright": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🦋 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ ✨', callback_data='about')
         ]],
         "about": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🦋 ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
+            InlineKeyboardButton('ᴅᴏɴᴀᴛᴇ ✨', callback_data='donate')
         ]]
     },
 
