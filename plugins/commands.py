@@ -180,97 +180,136 @@ ui_layouts = {
         ]]
     },
 
-    "yomaivo": {
-        "start": [[
-            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
-        ]],
-        "how_to_use": [[
-            InlineKeyboardButton('Back', callback_data='start')
-        ]],
-        "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
-        ]],
-        "help": [[
-        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
-        ],[
-            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
-        ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
-            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
-        ]],
-        "donate": [[
-            InlineKeyboardButton('Back', callback_data='start')
-        ]],
-        "copyright": [[
-            InlineKeyboardButton('Back', callback_data='start')
-        ]],
-        "about": [[
-            InlineKeyboardButton('Back', callback_data='start')
-        ]]
-    },
-
     "sungspecial": {
         "start": [[
-            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+            InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
+        ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Arise_Botz'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots')
+        ],[
+            InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
+        ],[
+            InlineKeyboardButton('⚙ ꜱᴇᴛᴛɪɴɢꜱ', callback_data='settings#main')
         ]],
-        "how_to_use": [[
-            InlineKeyboardButton('Back', callback_data='start')
+        "about": [[
+            InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
+            InlineKeyboardButton('ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
+            InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
         ]],
         "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+            InlineKeyboardButton('🔙 back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ 📊', callback_data='systm_sts')
         ]],
         "help": [[
-        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        InlineKeyboardButton('❗️ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ⁉️', callback_data='how_to_use')
         ],[
-            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs 📊', callback_data='status')
         ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
-            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🗯', callback_data='about')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('⚙️ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('Back 👉🏻', callback_data='start')
         ]],
         "donate": [[
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
             InlineKeyboardButton('Back', callback_data='start')
         ]],
         "copyright": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('Back 👉🏻', callback_data='start')
+        ]],
+    },
+
+    "yomaivo": {
+        "start": [[
+            InlineKeyboardButton('❣️ 開発者 ❣️', url='https://t.me/Shubham_X_Official')
+        ],[
+            InlineKeyboardButton('🔍 サポート', url='https://t.me/Arise_Botz'),
+            InlineKeyboardButton('🤖 アップデート', url='https://t.me/Arise_Bots')
+        ],[
+            InlineKeyboardButton('👨‍💻 ヘルプ', callback_data='help'),
+            InlineKeyboardButton('💁 について', callback_data='about')
+        ],[
+            InlineKeyboardButton('⚙ 設定', callback_data='settings#main')
         ]],
         "about": [[
-            InlineKeyboardButton('Back', callback_data='start')
-        ]]
+            InlineKeyboardButton('💳 寄付する', callback_data='donate'),
+            InlineKeyboardButton('著作権', callback_data='copyright'),
+            InlineKeyboardButton('統計 ✨️', callback_data='status')
+        ]],
+        "status": [[
+            InlineKeyboardButton('🔙 戻る', callback_data='help'),
+            InlineKeyboardButton('システム統計 📊', callback_data='systm_sts')
+        ]],
+        "help": [[
+        InlineKeyboardButton('❗️ 使い方 ⁉️', callback_data='how_to_use')
+        ],[
+            InlineKeyboardButton('⚙ 設定', callback_data='settings#main'),
+            InlineKeyboardButton('状態 📊', callback_data='status')
+        ],[
+            InlineKeyboardButton('🔙 戻る', callback_data='back'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🗯', callback_data='about')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('⚙️ 設定', callback_data='settings#main'),
+            InlineKeyboardButton('戻る 👉🏻', callback_data='start')
+        ]],
+        "donate": [[
+            InlineKeyboardButton('🧑‍💻 開発者 🧑‍💻', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('戻る', callback_data='start')
+        ]],
+        "copyright": [[
+            InlineKeyboardButton('🧑‍💻 開発者 🧑‍💻', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('戻る 👉🏻', callback_data='start')
+        ]],
     },
     
     "arisebots": {
         "start": [[
-            InlineKeyboardButton('👨‍💻 Help', callback_data='help')
+            InlineKeyboardButton('❣️ ᴅᴇᴠᴇʟᴏᴘᴇʀ ❣️', url='https://t.me/Shubham_X_Official')
+        ],[
+            InlineKeyboardButton('🔍 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Arise_Botz'),
+            InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Arise_Bots')
+        ],[
+            InlineKeyboardButton('👨‍💻 ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('💁 ᴀʙᴏᴜᴛ', callback_data='about')
+        ],[
+            InlineKeyboardButton('⚙ ꜱᴇᴛᴛɪɴɢꜱ', callback_data='settings#main')
         ]],
-        "how_to_use": [[
-            InlineKeyboardButton('Back', callback_data='start')
+        "about": [[
+            InlineKeyboardButton('💳 ᴅᴏɴᴀᴛᴇ', callback_data='donate'),
+            InlineKeyboardButton('ᴄᴏᴘʏʀɪɢʜᴛ', callback_data='copyright'),
+            InlineKeyboardButton('ꜱᴛᴀᴛꜱ ✨️', callback_data='status')
         ]],
         "status": [[
-            InlineKeyboardButton('• back', callback_data='help'),
-            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ •', callback_data='systm_sts')
+            InlineKeyboardButton('🔙 back', callback_data='help'),
+            InlineKeyboardButton('ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛꜱ 📊', callback_data='systm_sts')
         ]],
         "help": [[
-        InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='how_to_use')
+        InlineKeyboardButton('❗️ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ⁉️', callback_data='how_to_use')
         ],[
-            InlineKeyboardButton('• sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
-            InlineKeyboardButton('• sᴛᴀᴛᴜs ', callback_data='status')
+            InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs 📊', callback_data='status')
         ],[
-            InlineKeyboardButton('• ʙᴀᴄᴋ', callback_data='back'),
-            InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='back'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ 🗯', callback_data='about')
+        ]],
+        "how_to_use": [[
+            InlineKeyboardButton('⚙️ sᴇᴛᴛɪɴɢs', callback_data='settings#main'),
+            InlineKeyboardButton('Back 👉🏻', callback_data='start')
         ]],
         "donate": [[
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
             InlineKeyboardButton('Back', callback_data='start')
         ]],
         "copyright": [[
-            InlineKeyboardButton('Back', callback_data='start')
+            InlineKeyboardButton('🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧑‍💻', url='https://t.me/Shubham_X_Official'),
+            InlineKeyboardButton('Back 👉🏻', callback_data='start')
         ]],
-        "about": [[
-            InlineKeyboardButton('Back', callback_data='start')
-        ]]
     }
     
 }
